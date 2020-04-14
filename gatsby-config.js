@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Manuel Yemoh Portfolio`,
+    description: `Portfolio 2020`,
+    author: `Manuel Yemoh`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +12,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Orbitron`, `source sans pro\:300,400,400i,700`],
+        display: "swap",
       },
     },
     `gatsby-transformer-sharp`,

@@ -1,8 +1,17 @@
 import React from "react"
 import "./hero.scss"
 import avatar from "../images/avatar.jpg"
+import { TweenMax } from "gsap"
 
 class Hero extends React.Component {
+  constructor() {
+    super()
+
+    // reference to the animation
+    this.myTween = null
+    this.animateArrows = this.animateArrows.bind(this)
+  }
+
   componentDidMount() {
     //drawing the characters
     function draw() {
@@ -53,6 +62,21 @@ class Hero extends React.Component {
     setInterval(draw, 35)
   }
 
+  animateArrows() {
+    this.myTween = TweenMax.to(this.topArrow, 0.35, { rotate: "180" })
+    this.myTween = TweenMax.to(this.bottomArrow, 0.35, { rotate: "180" })
+    this.myTween = TweenMax.to(this.topArrow2, 0.35, { rotate: "-180" })
+    this.myTween = TweenMax.to(this.bottomArrow2, 0.35, { rotate: "-180" })
+
+    this.myTween = TweenMax.to(this.topArrow, 0, { delay: 0.4, rotate: "0" })
+    this.myTween = TweenMax.to(this.bottomArrow, 0, { delay: 0.4, rotate: "0" })
+    this.myTween = TweenMax.to(this.topArrow2, 0, { delay: 0.4, rotate: "0" })
+    this.myTween = TweenMax.to(this.bottomArrow2, 0, {
+      delay: 0.4,
+      rotate: "0",
+    })
+  }
+
   render() {
     return (
       <section className="home">
@@ -61,6 +85,63 @@ class Hero extends React.Component {
         </div>
         <div className="homeMainSection">
           <img src={avatar} className="avatar" alt="hello"></img>
+          <h1 ref={head1 => (this.head1 = head1)}>
+            Front end developer &<br></br> Project Manager
+          </h1>
+          <a
+            rel="noopener noreferrer"
+            href="http://www.manuelyemoh.co.uk/ManuelYemohCV_2019_dev_.pdf"
+            target="_blank"
+          >
+            Download CV
+          </a>
+          <p>
+            <a
+              rel="noopener noreferrer"
+              href="tel:075-250-0-3188"
+              target="_blank"
+            >
+              07525003188
+            </a>
+            &nbsp; / &nbsp;
+            <a
+              rel="noopener noreferrer"
+              href="mailto:manuelyemoh@gmail.com"
+              target="_blank"
+            >
+              manuelyemoh@gmail.com
+            </a>
+          </p>
+          <div
+            className="downSelect"
+            onMouseOver={event => this.animateArrows()}
+            onFocus={event => this.animateArrows()}
+          >
+            <span
+              ref={topArrow => (this.topArrow = topArrow)}
+              className="topArrow"
+            >
+              \
+            </span>
+            <span
+              ref={topArrow2 => (this.topArrow2 = topArrow2)}
+              className="topArrow2"
+            >
+              /
+            </span>
+            <span
+              ref={bottomArrow => (this.bottomArrow = bottomArrow)}
+              className="bottomArrow"
+            >
+              \
+            </span>
+            <span
+              ref={bottomArrow2 => (this.bottomArrow2 = bottomArrow2)}
+              className="bottomArrow2"
+            >
+              /
+            </span>
+          </div>
         </div>
       </section>
     )
