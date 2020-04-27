@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/client_files/testing/`,
   siteMetadata: {
     title: `Manuel Yemoh Portfolio`,
     description: `Portfolio 2020`,
@@ -12,13 +13,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Orbitron`, `source sans pro\:300,400,400i,700`],
-        display: "swap",
       },
     },
     `gatsby-transformer-sharp`,

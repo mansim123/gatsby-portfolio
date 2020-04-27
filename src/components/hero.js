@@ -1,6 +1,7 @@
 import React from "react"
 import "./hero.scss"
 import avatar from "../images/avatar.jpg"
+import "typeface-roboto-mono"
 import { TweenMax } from "gsap"
 import { ScrollTo } from "react-scroll-to"
 
@@ -96,14 +97,14 @@ class Hero extends React.Component {
 
   render() {
     return (
-      <section className="home">
+      <section className="hero-section">
         <div className="canvas">
           <canvas id="m"></canvas>
         </div>
-        <div className="homeMainSection">
+        <div className="heroMainSection">
           <img src={avatar} className="avatar" alt="hello"></img>
           <h1 ref={head1 => (this.head1 = head1)}>
-            Front end developer &<br></br> Project Manager
+            Front end developer &<br></br> Animation expert
           </h1>
           <a
             rel="noopener noreferrer"
