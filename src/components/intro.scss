@@ -1,6 +1,12 @@
 $aCopy: #f0ece2;
 $aCopyOver: #69779b;
 
+@font-face {
+  font-family: "NotoSansJP";
+  src: local("NotoSansJP"),
+    url(../fonts/NotoSansJP-Regular.otf) format("truetype");
+}
+
 .intro-section {
   background-color: #69779b;
   height: calc(100vh + 0px);
@@ -17,7 +23,7 @@ $aCopyOver: #69779b;
     margin-left: auto;
     margin-right: auto;
     h1 {
-      // font-family: "limelight";
+      font-family: "NotoSansJP";
       font-size: 2.4em;
       padding-top: 25px;
       padding-bottom: 10px;
