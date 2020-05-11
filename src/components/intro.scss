@@ -2,17 +2,23 @@ $aCopy: #f0ece2;
 $aCopyOver: #69779b;
 
 @font-face {
-  font-family: "NotoSansJP";
-  src: local("NotoSansJP"),
-    url(../fonts/NotoSansJP-Regular.otf) format("truetype");
+  font-family: "NotoSans-Bold";
+  src: local("NotoSans-Bold"),
+    url(../fonts/NotoSans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans-Regular";
+  src: local("NotoSans-Regular"),
+    url(../fonts/NotoSans-Regular.ttf) format("truetype");
 }
 
 .intro-section {
-  background-color: #69779b;
+  background-color: #000000;
   height: calc(100vh + 0px);
   padding: 0 0px;
   .introMainSection {
-    // font-family: "limelight", sans-serif;
+    font-family: "NotoSans-Regular", sans-serif;
     padding: 100px 0;
     text-align: center;
     width: 700px;
@@ -23,7 +29,7 @@ $aCopyOver: #69779b;
     margin-left: auto;
     margin-right: auto;
     h1 {
-      font-family: "NotoSansJP";
+      font-family: "NotoSans-Bold", sans-serif;
       font-size: 2.4em;
       padding-top: 25px;
       padding-bottom: 10px;

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import "./fonts/NotoSansJP-Regular.otf"
-
+import '../fonts/NotoSans-Bold.ttf'
+import '../fonts/NotoSans-Regular.ttf'
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"

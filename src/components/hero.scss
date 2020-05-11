@@ -6,7 +6,6 @@ $aCopyOver: #69779b;
   height: calc(100vh + 0px);
   padding: 0 0px;
   .heroMainSection {
-    font-family: "roboto-mono";
     padding: 100px 0;
     text-align: center;
     width: 700px;
@@ -17,7 +16,6 @@ $aCopyOver: #69779b;
     margin-left: auto;
     margin-right: auto;
     h1 {
-      font-family: "roboto-mono";
       font-size: 2.4em;
       padding-top: 25px;
       padding-bottom: 10px;
@@ -48,6 +46,7 @@ $aCopyOver: #69779b;
     border: 10px solid #5e5959;
   }
   .downSelect {
+    font-family: "NotoSans-Bold", sans-serif;
     position: relative;
     overflow: hidden;
     cursor: pointer;
