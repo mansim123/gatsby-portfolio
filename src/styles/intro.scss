@@ -20,11 +20,11 @@ $aCopyOver: #69779b;
   padding: 0 0px;
   .introMainSection {
     font-family: "NotoSans-Regular", sans-serif;
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
     width: 700px;
     color: $mainCopy;
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -33,6 +33,12 @@ $aCopyOver: #69779b;
       font-family: "NotoSans-Bold", sans-serif;
       font-size: 2.4em;
       padding-top: 25px;
+      padding-bottom: 10px;
+    }
+    h2 {
+      font-family: "NotoSans-Regular", sans-serif;
+      font-size: 0.8em;
+      padding-top: 0px;
       padding-bottom: 10px;
     }
     a {
@@ -47,52 +53,17 @@ $aCopyOver: #69779b;
     p {
       padding-top: 22px;
     }
+    
   }
-  .avatar {
-    background-image: url(/static/media/avatar.b401e273.jpg);
-    width: 280px;
-    height: 280px;
-    background-size: cover;
-    border-radius: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border: 10px solid #5e5959;
-  }
-  .downSelect {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    margin: 30px auto;
-    border: 3px solid #ffffff;
-    height: 60px;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    width: 60px;
-    span {
-      position: absolute;
-    }
-    .topArrow {
-      left: 50%;
-      margin-left: -9px;
-      top: 8px;
-    }
-    .topArrow2 {
-      left: 50%;
-      margin-left: 0px;
-      top: 8px;
-    }
-    .bottomArrow {
-      left: 50%;
-      margin-left: -9px;
-      top: 18px;
-    }
-    .bottomArrow2 {
-      left: 50%;
-      margin-left: 0px;
-      top: 18px;
+  .flexContainer {
+    display: flex;
+    justify-content: center;
+    div {
+      width: 100%;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
     }
   }
   .downSelect:hover {
@@ -125,6 +96,6 @@ $aCopyOver: #69779b;
     .avatar {
       width: 180px;
       height: 180px;
-    }
+    }  
   }
 }
