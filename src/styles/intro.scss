@@ -1,21 +1,36 @@
+$mainCopy: #000000;
 $aCopy: #f0ece2;
 $aCopyOver: #69779b;
 
-.hero-section {
-  background-color: #010101;
+@font-face {
+  font-family: "NotoSans-Bold";
+  src: local("NotoSans-Bold"),
+    url(../fonts/NotoSans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans-Regular";
+  src: local("NotoSans-Regular"),
+    url(../fonts/NotoSans-Regular.ttf) format("truetype");
+}
+
+.intro-section {
+  background-color: #ffffff;
   height: calc(100vh + 0px);
   padding: 0 0px;
-  .heroMainSection {
+  .introMainSection {
+    font-family: "NotoSans-Regular", sans-serif;
     padding: 100px 0;
     text-align: center;
     width: 700px;
-    color: #fff;
+    color: $mainCopy;
     position: absolute;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     h1 {
+      font-family: "NotoSans-Bold", sans-serif;
       font-size: 2.4em;
       padding-top: 25px;
       padding-bottom: 10px;
@@ -46,7 +61,6 @@ $aCopyOver: #69779b;
     border: 10px solid #5e5959;
   }
   .downSelect {
-    font-family: "NotoSans-Bold", sans-serif;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -86,33 +100,17 @@ $aCopyOver: #69779b;
   }
 }
 
-.canvas {
-  //background: url(http://findmatthew.com/style/../img/filler.png) center
-  //center/cover;
-  height: 103%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  opacity: 0.5;
-  overflow: hidden;
-}
-
 @media only screen and (max-width: 750px) {
-  .home {
-    .homeMainSection {
+  .intro-section {
+    .introMainSection {
       width: 100%;
-      .avatar {
-        width: 220px;
-        height: 220px;
-      }
     }
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .home {
-    .homeMainSection {
+  .intro-section {
+    .introMainSection {
       padding: 75px 0px;
       h1 {
         font-size: 1.2em;

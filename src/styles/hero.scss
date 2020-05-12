@@ -13,11 +13,11 @@ $aCopyOver: #69779b;
     url(../fonts/NotoSans-Regular.ttf) format("truetype");
 }
 
-.intro-section {
-  background-color: #000000;
+.hero-section {
+  background-color: #010101;
   height: calc(100vh + 0px);
   padding: 0 0px;
-  .introMainSection {
+  .heroMainSection {
     font-family: "NotoSans-Regular", sans-serif;
     padding: 100px 0;
     text-align: center;
@@ -60,6 +60,7 @@ $aCopyOver: #69779b;
     border: 10px solid #5e5959;
   }
   .downSelect {
+    font-family: "NotoSans-Bold", sans-serif;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -112,8 +113,8 @@ $aCopyOver: #69779b;
 }
 
 @media only screen and (max-width: 750px) {
-  .home {
-    .homeMainSection {
+  .hero-section {
+    .heroMainSection {
       width: 100%;
       .avatar {
         width: 220px;
@@ -124,8 +125,8 @@ $aCopyOver: #69779b;
 }
 
 @media only screen and (max-width: 500px) {
-  .home {
-    .homeMainSection {
+  .hero-section {
+    .heroMainSection {
       padding: 75px 0px;
       h1 {
         font-size: 1.2em;

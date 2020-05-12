@@ -1,5 +1,5 @@
 import React from "react"
-import "./intro.scss"
+import "../styles/intro.scss"
 import avatar from "../images/avatar.jpg"
 import { TweenMax } from "gsap"
 import { ScrollTo } from "react-scroll-to"
@@ -20,6 +20,7 @@ class Intro extends React.Component {
       <section className="intro-section">
         <div className="introMainSection">
           <h1>The Drive to Learn</h1>
+          <h2>working with all the latest technlogies</h2>
         </div>
       </section>
     )

@@ -1,7 +1,7 @@
 import React from "react"
-import "./hero.scss"
-import avatar from "../images/avatar.jpg";
-import { TweenMax } from "gsap";
+import "../styles/hero.scss"
+import avatar from "../images/avatar.jpg"
+import { TweenMax } from "gsap"
 
 let drawInterval
 
@@ -109,7 +109,8 @@ class Hero extends React.Component {
             href="http://www.manuelyemoh.co.uk/ManuelYemohCV_2019_dev_.pdf"
             target="_blank"
           >
-            Download CV</a>
+            Download CV
+          </a>
           <p>
             <a
               rel="noopener noreferrer"
