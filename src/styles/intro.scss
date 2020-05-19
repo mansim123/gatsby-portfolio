@@ -1,4 +1,5 @@
 $mainCopy: #000000;
+$subCopy: #9f8e8e;
 $aCopy: #f0ece2;
 $aCopyOver: #69779b;
 
@@ -16,8 +17,8 @@ $aCopyOver: #69779b;
 
 .intro-section {
   background-color: #ffffff;
-  height: calc(100vh + 0px);
-  padding: 0 0px;
+  height: auto;
+  padding: 0 0px 50px 0px;
   .introMainSection {
     font-family: "NotoSans-Regular", sans-serif;
     padding: 50px 0;
@@ -32,23 +33,14 @@ $aCopyOver: #69779b;
     h1 {
       font-family: "NotoSans-Bold", sans-serif;
       font-size: 2.4em;
-      padding-top: 25px;
       padding-bottom: 10px;
     }
     h2 {
       font-family: "NotoSans-Regular", sans-serif;
-      font-size: 0.8em;
+      color: $subCopy;
+      font-size: 0.8em; 
       padding-top: 0px;
       padding-bottom: 10px;
-    }
-    a {
-      color: $aCopy;
-      border-bottom: 1px solid $aCopy;
-    }
-    a:hover {
-      text-decoration: none;
-      color: $aCopyOver;
-      border-bottom: 1px solid $aCopyOver;
     }
     p {
       padding-top: 22px;
@@ -59,15 +51,68 @@ $aCopyOver: #69779b;
     display: flex;
     justify-content: center;
     div {
-      width: 100%;
+      flex: 0 0 18em;
       margin: 10px;
       text-align: center;
       line-height: 75px;
       font-size: 30px;
     }
+    h3 {
+      font-family: "NotoSans-Bold", sans-serif;
+      font-size: 0.8em;
+      padding-top: 50px;
+      text-align: left;
+      padding-bottom: 10px;
+    }
+    p {
+      font-family: "NotoSans-Regular";
+      padding-top: 0px;
+      font-size: 0.6em;
+      line-height: normal;
+      text-align: left;
+    }
+    .bar {
+      width:100%;
+      height:10px;
+      background-color: pink;
+    }
   }
-  .downSelect:hover {
-    border: 3px solid $aCopyOver;
+  .flexContainer2 {
+    display: flex;
+    justify-content: center;
+    div {
+      // flex: 0 0 18em;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+    // h3 {
+    //   font-family: "NotoSans-Bold", sans-serif;
+    //   font-size: 0.8em;
+    //   padding-top: 50px;
+    //   text-align: left;
+    //   padding-bottom: 10px;
+    // }
+    // p {
+    //   font-family: "NotoSans-Regular";
+    //   padding-top: 0px;
+    //   font-size: 0.6em;
+    //   line-height: normal;
+    //   text-align: left;
+    // }
+    span {
+      font-size:0.4em;
+    }
+    .bar {
+      width:800px;
+      height:35px;
+      background-color: pink;
+      h4 {
+        font-size:0.6em;
+        line-height: 1.8em;
+      }
+    }
   }
 }
 
@@ -93,9 +138,5 @@ $aCopyOver: #69779b;
         border-bottom: 1px solid $aCopy;
       }
     }
-    .avatar {
-      width: 180px;
-      height: 180px;
-    }  
   }
 }

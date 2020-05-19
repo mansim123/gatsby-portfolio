@@ -31,9 +31,19 @@ class Intro extends React.Component {
               Manuel Yemoh
             </h3>
             <p>
-              BSc in Computer Game Design, with over 9 years of professional digital development experience and 4 years running a successful production studio. Working with some of the biggest agencies in London, specialising in HTML5 digital development, project management and consultation. Available for on-site or remote work.
+              BSc in Computer Game Design, with over 9 years of professional digital development
+              experience and 4 years running a successful production studio. Working with some
+              of the biggest agencies in London, specialising in HTML5 digital development, project
+              management and consultation. Available for on-site or remote&nbsp;work.
             </p>
-          </div> 
+          </div>
+        </div>
+        <div className="flexContainer2">
+          <div>
+            <div className="bar">
+                <h4>Something</h4>
+            </div>
+          </div>
         </div>
       </section>
     )
