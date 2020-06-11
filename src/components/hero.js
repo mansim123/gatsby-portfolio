@@ -22,7 +22,7 @@ class Hero extends React.Component {
     m.height = h
     m.width = w
 
-    //chinese characters - taken from the unicode charset
+    //Japanese characters - taken from the unicode charset
     var matrix = "バカマン"
     //converting the string into an array of single characters
     matrix = matrix.split("")

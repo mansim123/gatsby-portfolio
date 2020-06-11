@@ -1,5 +1,5 @@
-$mainCopy: #000000;
-$subCopy: #9f8e8e;
+$mainCopy: #ffffff;
+$subCopy: #cacaca;
 $aCopy: #f0ece2;
 $aCopyOver: #69779b;
 
@@ -16,7 +16,7 @@ $aCopyOver: #69779b;
 }
 
 .intro-section {
-  background-color: #ffffff;
+  background-color: #080808;
   height: auto;
   padding: 0 0px 50px 0px;
   .introMainSection {
@@ -38,14 +38,110 @@ $aCopyOver: #69779b;
     h2 {
       font-family: "NotoSans-Regular", sans-serif;
       color: $subCopy;
-      font-size: 0.8em; 
+      font-size: 0.8em;
       padding-top: 0px;
       padding-bottom: 10px;
     }
     p {
       padding-top: 22px;
     }
-    
+  }
+  .bubbleContainer {
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    .bubbles {
+      position: absolute;
+      // opacity: 0;
+      border-radius: 50%;
+      span a {
+        font-size: 20px;
+        text-align: center;
+        color: #ffffff;
+        display: block;
+      }
+    }
+    .bubble0 {
+      top: 30px;
+      left: 30px;
+      width: 250px;
+      height: 250px;
+      background-color: blue;
+      span a {
+        line-height: 250px;
+      }
+    }
+    .bubble1 {
+      top: 30px;
+      left: 230px;
+      width: 230px;
+      height: 230px;
+      background-color: green;
+      span a {
+        line-height: 230px;
+      }
+    }
+    .bubble2 {
+      top: 220px;
+      left: 160px;
+      width: 240px;
+      height: 240px;
+      background-color: pink;
+      span a {
+        line-height: 240px;
+      }
+    }
+    .bubble3 {
+      top: 150px;
+      left: 350px;
+      width: 220px;
+      height: 220px;
+      background-color: yellow;
+      span a {
+        line-height: 220px;
+      }
+    }
+    .bubble4 {
+      top: 40px;
+      left: 450px;
+      width: 270px;
+      height: 270px;
+      background-color: grey;
+      span a {
+        line-height: 270px;
+      }
+    }
+    .bubble5 {
+      top: 210px;
+      left: 540px;
+      width: 270px;
+      height: 270px;
+      background-color: #04ff00;
+      span a {
+        line-height: 270px;
+      }
+    }
+    .bubble6 {
+      top: 60px;
+      left: 650px;
+      width: 210px;
+      height: 210px;
+      background-color: #3f00ff;
+      span a {
+        line-height: 210px;
+      }
+    }
+    .bubble7 {
+      top: 160px;
+      left: 750px;
+      width: 260px;
+      height: 260px;
+      background-color: #3f00ff;
+      span a {
+        line-height: 260px;
+      }
+    }
   }
   .flexContainer {
     display: flex;
@@ -59,59 +155,19 @@ $aCopyOver: #69779b;
     }
     h3 {
       font-family: "NotoSans-Bold", sans-serif;
+      color: $mainCopy;
       font-size: 0.8em;
       padding-top: 50px;
       text-align: left;
       padding-bottom: 10px;
     }
     p {
+      color: $mainCopy;
       font-family: "NotoSans-Regular";
       padding-top: 0px;
       font-size: 0.6em;
       line-height: normal;
       text-align: left;
-    }
-    .bar {
-      width:100%;
-      height:10px;
-      background-color: pink;
-    }
-  }
-  .flexContainer2 {
-    display: flex;
-    justify-content: center;
-    div {
-      // flex: 0 0 18em;
-      margin: 10px;
-      text-align: center;
-      line-height: 75px;
-      font-size: 30px;
-    }
-    // h3 {
-    //   font-family: "NotoSans-Bold", sans-serif;
-    //   font-size: 0.8em;
-    //   padding-top: 50px;
-    //   text-align: left;
-    //   padding-bottom: 10px;
-    // }
-    // p {
-    //   font-family: "NotoSans-Regular";
-    //   padding-top: 0px;
-    //   font-size: 0.6em;
-    //   line-height: normal;
-    //   text-align: left;
-    // }
-    span {
-      font-size:0.4em;
-    }
-    .bar {
-      width:800px;
-      height:35px;
-      background-color: pink;
-      h4 {
-        font-size:0.6em;
-        line-height: 1.8em;
-      }
     }
   }
 }
