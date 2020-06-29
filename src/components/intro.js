@@ -3,25 +3,52 @@ import "../styles/intro.scss"
 import profilePic from "../images/profilePic.jpg"
 import { TweenMax } from "gsap"
 import { ScrollTo } from "react-scroll-to"
+import SkillsData from "../data/SkillsData.js";
 
 class Intro extends React.Component {
   constructor() {
     super()
-    // reference to the animation
+    this.bubble = []
     this.myTween = null
   }
 
   componentDidMount() {
-    // this.myTween = TweenMax.to(this.bubble, 0, { scale: "0", opacity: "0" })
-    // this.myTween = TweenMax.to(this.bubble, 2.5, {
-    //   delay: "2",
-    //   scale: "1",
-    //   opacity: "1",
-    //   ease: "elastic.out",
-    // })
+
+    this.animateBubbles();
+    
+  }
+
+  animateBubbles() {
+
+    for(let i=0;i<this.bubble.length;i++){
+      this.myTween = TweenMax.to(this.bubble[i], 0, { scale: "0", opacity: "0" })
+      this.myTween = TweenMax.to(this.bubble[i], 3.5, {
+        delay: i/5,
+        scale: "1",
+        opacity: "0.95",
+        ease: "elastic.out",
+      })
+    }
   }
 
   render() {
+    const skillComponents = SkillsData.map((skill, index) => (
+      <div key={skill.id}>
+        <div
+          ref={bubble => (this.bubble[index] = bubble)}
+          className={"bubbles bubble"+[index]} style={{
+            backgroundColor: "#"+skill.bgColor,
+            opacity:0
+          }}>
+            <span>
+              <a>
+                {skill.title}
+              </a>
+              </span>
+        </div>
+      </div>
+    ));
+
     return (
       <section className="intro-section">
         <div className="introMainSection">
@@ -45,80 +72,7 @@ class Intro extends React.Component {
           </div>
         </div>
         <div className="bubbleContainer">
-          <div
-            className="bubbles bubble0"
-            ref={bubble => (this.bubble = bubble)}
-          >
-            <span>
-              <a>HTML5</a>
-            </span>
-          </div>
-          <div
-            className="bubbles bubble1"
-            ref={bubble => (this.bubble = bubble)}
-          >
-            <span>
-              <a>E56</a>
-            </span>
-          </div>
-          <div
-            className="bubbles bubble2"
-            ref={bubble => (this.bubble = bubble)}
-          >
-            <span>
-              <a>CSS3</a>
-            </span>
-          </div>
-          <div
-            className="bubbles bubble3"
-            ref={bubble => (this.bubble = bubble)}
-          >
-            <span>
-              <a>Javascript</a>
-            </span>
-          </div>
-          <div
-            className="bubbles bubble4"
-            ref={bubble => (this.bubble = bubble)}
-          >
-            <span>
-              <a>HTML Emails</a>
-            </span>
-          </div>
-          <div
-            className="bubbles bubble5"
-            ref={bubble => (this.bubble = bubble)}
-          >
-            <span>
-              <a>React</a>
-            </span>
-          </div>
-          <div
-            className="bubbles bubble6"
-            ref={bubble => (this.bubble = bubble)}
-          >
-            <span>
-              <a>QA/Testing</a>
-            </span>
-          </div>
-          <div
-            className="bubbles bubble7"
-            ref={bubble => (this.bubble = bubble)}
-          >
-            <span>
-              <a>Project Management</a>
-            </span>
-          </div>
-          {/* <div className="bubble8" ref={bubble => (this.bubble = bubble)}>
-            <span>
-              <a>E56</a>
-            </span>
-          </div>
-          <div className="bubble9" ref={bubble => (this.bubble = bubble)}>
-            <span>
-              <a>E56</a>
-            </span>
-          </div> */}
+          {skillComponents}
         </div>
       </section>
     )
