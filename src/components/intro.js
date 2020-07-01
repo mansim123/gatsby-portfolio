@@ -8,6 +8,10 @@ import SkillsData from "../data/SkillsData.js";
 class Intro extends React.Component {
   constructor() {
     super()
+    this.state = {
+      width:  0,
+      height: 0
+    }
     this.bubble = []
     this.myTween = null
   }
@@ -15,7 +19,21 @@ class Intro extends React.Component {
   componentDidMount() {
 
     this.animateBubbles();
-    
+    this.resizeBubbles();
+    window.addEventListener("resize", this.resizeBubbles.bind(this))
+  
+  }
+
+  resizeBubbles() {
+    if(window.innerWidth > 701 && window.innerWidth < 1000) {
+      this.myTween = TweenMax.to(this.bubbleCont, 0, { scale:window.innerWidth/1100,transformOrigin:"20% 0%"})
+    }
+    else if(window.innerWidth < 700){
+      this.myTween = TweenMax.to(this.bubbleCont, 0, { scale:window.innerWidth/1100,transformOrigin:"7% 0%"})
+    }
+    else if(window.innerWidth > 1000){
+      this.myTween = TweenMax.to(this.bubbleCont, 0, { scale:1,transformOrigin:"0% 0%"})
+    }
   }
 
   animateBubbles() {
@@ -56,10 +74,10 @@ class Intro extends React.Component {
           <h2>working with all the latest technlogies</h2>
         </div>
         <div className="flexContainer">
-          <div>
+          <div className="leftCont">
             <img src={profilePic} alt=""></img>
           </div>
-          <div>
+          <div className="rightCont">
             <h3>Manuel Yemoh</h3>
             <p>
               BSc in Computer Game Design, with over 9 years of professional
@@ -71,7 +89,7 @@ class Intro extends React.Component {
             </p>
           </div>
         </div>
-        <div className="bubbleContainer">
+        <div className="bubbleContainer" ref={bubbleCont => (this.bubbleCont = bubbleCont)}>
           {skillComponents}
         </div>
       </section>

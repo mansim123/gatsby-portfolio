@@ -48,7 +48,7 @@ $aCopyOver: #69779b;
   }
   .bubbleContainer {
     width: 1000px;
-    height: 500px;
+    height: 600px;
     margin: 0 auto;
     position: relative;
     .bubbles {
@@ -155,7 +155,12 @@ $aCopyOver: #69779b;
   .flexContainer {
     display: flex;
     justify-content: center;
-    div {
+    padding-bottom: 50px;
+    .leftCont {
+      flex: 0 0 22em;
+      margin: 10px;
+    }
+    .rightCont {
       flex: 0 0 18em;
       margin: 10px;
       text-align: center;
@@ -181,18 +186,67 @@ $aCopyOver: #69779b;
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1000px) {
   .intro-section {
     .introMainSection {
+    width: 100%;
+    }
+    .bubbleContainer {
       width: 100%;
+      height: 500px;
+    }
+  }
+  .flexContainer {
+    .leftCont {
+      flex: 0 0 17em!important;
+    }
+    .rightCont {
+      flex: 0 0 13em!important;
+      h3 {
+        padding-top: 0px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .intro-section {
+    .bubbleContainer {
+      width: 100%;
+      height: 350px;
+    }
+    .leftCont {
+      text-align: center;
+      display: block;
+    }
+    .flexContainer {
+      display:block;
+      padding: 0px 20px;
+      .leftCont {
+        flex: 0 0 17em!important;
+      }
+      h3 {
+        font-size: 0.8em;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      p {
+        padding-top: 0px;
+        font-size: 0.5em;
+        text-align: center;
+      }
     }
   }
 }
 
 @media only screen and (max-width: 500px) {
   .intro-section {
+    .bubbleContainer {
+      width: 100%;
+      height: 250px;
+    }
     .introMainSection {
-      padding: 75px 0px;
+      padding: 25px 0px;
       h1 {
         font-size: 1.2em;
         padding-top: 25px;
@@ -201,6 +255,19 @@ $aCopyOver: #69779b;
       a {
         color: $aCopy;
         border-bottom: 1px solid $aCopy;
+      }
+      
+    }
+    .flexContainer {
+      h3 {
+        font-size: 0.7em;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      p {
+        padding-top: 0px;
+        font-size: 0.4em;
+        text-align: center;
       }
     }
   }
